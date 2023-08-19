@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+*,*::before,*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    /*------------------------------------------COLORS::START------------------------------------------------*/
+    --white:hsl(0, 0%, 100%);
+    --black:hsl(0, 0%, 0%);
+    --light-black:hsla(0, 0%, 0%, 0.212);
+    --cyan: hsl(179, 62%, 43%);
+    --cyan-medium:hsl(179, 47%, 52%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    /*------------------------------------------COLORS::END------------------------------------------------*/
+    /*------------------------------------------FONT::START------------------------------------------------*/
+    --font-family-:'karla', sans-serif;
+
+}
+
+/**************************************RESETS:START******************************************/
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/**************************************RESETS:END******************************************/
+/**************************************UTILITIES::START******************************************/
+/* colors */
+.bg-white{
+    background-color: var(--white);
+}
+.bg-cyan{
+    background-color: var(--cyan);
+}
+.bg-cyan-medium{
+    background-color: var(--cyan-medium);
+}
+
+
+.txt-white{
+    color: var(--white);
+}
+.txt-light{
+    color: var(--light-gray);
+}
+.txt-bright-yellow{
+    color: var(--bright-yellow);
+}
+.txt-cyan{
+    color:var(--cyan);
+}
+.txt-grayish-blue{
+    color: var(--grayish-blue);
+}
+.txt-bold{
+    font-weight: 700;
+}
+/* grid */
+.mb-2{
+    margin-bottom: 1rem;
+
+}
+
+.box-shadow-light{
+    box-shadow: 0px 0px 30px 1px var(--light-black) ;
+}
+
+
+/**************************************UTILITIES:END******************************************/
+/**************************************BASE::START******************************************/
+
+
+body{
+    font-family: var(--font-family-);
+    background-color:#f8f8f8;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+/**************************************BASE::END******************************************/
+
+/************************************CARD::START************************************/
+.card-grid-container{
+    display: grid;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem;
+    max-width: 40rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+@media (min-width:50em) {
+    .card-grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-col-span-2{
+        grid-column: span 2;
+    }
+}
+.card{
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+
+
+.price-tag{
+    font-size: 2rem;
+}
+/* BUTTON  */
+.btn{
+    width: 100%;
+    border-radius: .2rem;
+    border: none;
+    padding: 1rem;
+    color: inherit;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.btn-primary{
+    background-color: var(--bright-yellow);
+}
